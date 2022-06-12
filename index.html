@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -16,11 +17,11 @@
           <li class="navigation-item"><a class="navigation-link" href="#">Сравнить</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">Корзина</a></li>
         </ul>
-        <ol class="navigation-list">
-          <li class="navigation-item"><a class="navigaion-link" href="catalog.html">Каталог товаров</a></li>
-          <li class="navigation-item"><a class="navigaion-link" href="#">Доставка</a></li>
-          <li class="navigation-item"><a class="navigaion-link" href="#">Гарантия</a></li>
-          <li class="navigation-item"><a class="navigaion-link" href="#">Контакты</a></li>
+        <ol class="navigation-list navigation-options">
+          <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">Гарантия</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
         </ol>
       </nav>
     </header>
@@ -29,73 +30,73 @@
       <section class="slider-1-description">
         <h2 class="slider-1-title visually-hidden">Квадрокоптер</h2>
         <img class="slider-1-image" src="images/quadrocopter.png" width="560" height="560" alt="Квадрокоптер">
-        <strong class="slider-1-commercial-slogan">Порхает как бабочка, жалит как пчела!</strong>
-        <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-        <a class="slider-1-link" href="#">Подробнее</a>
-        <dl class="slider-1-description-list">
-          <dt class="slider-1-description-term"> Дальность полета</dt>
-          <dd class="slider-1-description-definition">800 м</dd>
-          <dd class="slider-1-description-definition">
-          <dt class="slider-1-description-term">Радиус поражения</dt>
-          <dd class="slider-1-description-definition">50 м</dd>
+        <strong class="commercial-slogan">Порхает как бабочка, жалит как пчела!</strong>
+        <p class="commercial-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+        <a class="button slider-link" href="#">Подробнее</a>
+        <dl class="description-list">
+          <dt class="description-term"> Дальность полета</dt>
+          <dd class="description-definition">800 м</dd>
+          <dd class="description-definition">
+          <dt class="description-term">Радиус поражения</dt>
+          <dd class="description-definition">50 м</dd>
         </dl>
       </section>
       <section class="slider-2-description visually-hidden">          <!--Вопрос про visually hidden достаточно ли его указать только в section?-->
         <h2 class="slider-2-title">Фитнес-браслет</h2>
         <img class="slider-2-image" src="images/fitness_bracelet.png" width="560" height="560" alt="Фитнес-браслет">
-        <strong class="slider-2-commercial-slogan">Худеем правильно!</strong>
-        <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-        <a class="slider-2-link">Подробнее</a>
-        <dl class="slider-2-description-list">
-          <dt class="slider-2-description-term">Без подзарядки</dt>
-          <dd class="slider-2-description-definition">48 часов</dd>
+        <strong class="commercial-slogan">Худеем правильно!</strong>
+        <p class="commercial-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+        <a class="slider-link" href="#">Подробнее</a>
+        <dl class="description-list">
+          <dt class="description-term">Без подзарядки</dt>
+          <dd class="description-definition">48 часов</dd>
         </dl>
       </section>
       <section class="slider-3-description visually-hidden">
         <h2 class="slider-3-title">Селфи-палка</h2>
         <img class="slider-3-image" src="images/selfie_sticks.png" width="560" height="560" alt="Селфи-палки">
-        <strong class="slider-3-commercial-slogan">Делай селфи, как Бен Стиллер!</strong>
-        <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-        <a class="slider-3-link">Подробнее</a>
-        <dl class="slider-3-description-list">
-          <dt class="slider-3-description-term">Длина палки</dt>
-          <dd class="slider-3-description-definition">8,5 м</dd>
-          <dt class="slider-3-description-term">Вес палки</dt>
-          <dd class="slider-3-description-definition">5 кг</dd>
-          <dt class="slider-3-description-term">Материал</dt>
-          <dd class="slider-3-description-definition">Карбон</dd>
+        <strong class="commercial-slogan">Делай селфи, как Бен Стиллер!</strong>
+        <p class="commercial-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+        <a class="slider-link href="#"">Подробнее</a>
+        <dl class="description-list">
+          <dt class="description-term">Длина палки</dt>
+          <dd class="description-definition">8,5 м</dd>
+          <dt class="description-term">Вес палки</dt>
+          <dd class="description-definition">5 кг</dd>
+          <dt class="description-term">Материал</dt>
+          <dd class="description-definition">Карбон</dd>
         </dl>
       </section>
       <section class="catalog-main">
         <h2 class="catalog-main-title visually-hidden">Каталог товаров</h2>
         <ul class="catalog-main-list">
-          <li class="catalog-main-item"><a href="#">Виртуальная реальность</a></li>
-          <li class="catalog-main-item"><a href="#">Моноподы под селфи</a></li>
-          <li class="catalog-main-item"><a href="#">Экшн-камеры</a></li>
-          <li class="catalog-main-item"><a href="#">Фитнес-браслеты</a></li>
-          <li class="catalog-main-item"><a href="#">Умные часы</a></li>
-          <li class="catalog-main-item"><a href="#">Квадрокоптеры</a></li>
+          <li class="catalog-main-item"><a class="button-catalog-link" href="#">Виртуальная реальность</a></li>
+          <li class="catalog-main-item"><a class="button-catalog-link" href="#">Моноподы под селфи</a></li>
+          <li class="catalog-main-item"><a class="button-catalog-link" href="#">Экшн-камеры</a></li>
+          <li class="catalog-main-item"><a class="button-catalog-link" href="#">Фитнес-браслеты</a></li>
+          <li class="catalog-main-item"><a class="button-catalog-link" href="#">Умные часы</a></li>
+          <li class="catalog-main-item"><a class="button-catalog-link" href="#">Квадрокоптеры</a></li>
         </ul>
       </section>
       <section class="options">
         <h2 class="options-title">Опции при покупке</h2>
         <h3 class="visually-hidden">Доставка</h3>
-        <button class="options-delivery" type="button">
-          <span class="options-delivery-text">Доставка</span>
+        <button class="button options-delivery" type="button">
+          <span class="options-text">Доставка</span>
         </button>
         <p class="options-delivery-info">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
           Ведь мы неплохо заработаем, поднимая его на ваш этаж.
         </p>
         <h3 class="visually-hidden">Гарантия</h3>
-        <button class="options-guarantee" type="button">
-          <span class="options-guarantee-text">Гарантия</span>
+        <button class="button options-guarantee" type="button">
+          <span class="options-text">Гарантия</span>
         </button>
         <p class="options-delivery-info">Если из-за возгорания купленного у нас товара у вас
           сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
         </p>
         <h3 class="visually-hidden">Кредит</h3>
-        <button class="options-credit" type="button">
-          <span class="options-credit-text">Кредит</span>
+        <button class="button options-credit" type="button">
+          <span class="options-text">Кредит</span>
         </button>
         <p class="options-delivery-info">Залезть в долговую яму стало проще! 
           Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
@@ -115,7 +116,7 @@
           <li class="about-delivery-item">СДИК</li>
           <li class="about-delivery-item">ТоксБерри</li>
         </ul>
-        <a class="about-link" href="#">Подробнее о нас</a>
+        <a class="button about-link" href="#">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
@@ -139,7 +140,7 @@
         </p>
         <form class="subscription-form">
           <input type="email" id="email" name="email" placeholder="Ваш email">
-          <button type="submit">Подписаться</button>
+          <button type="submit" class="button subscription-button">Подписаться</button>
         </form>
         <p class="subscription-additional-info">Это бесплатно</p>
       </section>
@@ -150,9 +151,9 @@
         <p class="footer-address-info">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
       <ul class="footer-list">
-        <li class="footer-item"> <a class="footer-link" href="#">Доставка</a></li>
-        <li class="footer-item"><a class="footer-link" href="#">Гарантия</a></li>
-        <li class="footer-item"><a class="footer-link" href="#">Контакты</a></li>
+        <li class="footer-item"> <a class="button footer-link" href="#">Доставка</a></li>
+        <li class="footer-item"><a class="button button footer-link" href="#">Гарантия</a></li>
+        <li class="footer-item"><a class="button footer-link" href="#">Контакты</a></li>
       </ul>
       <a class="phone" href="tel:+78128121212"> Тел.: +7 812 812-12-12</a>
       <ul class="footer-social-list">
