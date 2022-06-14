@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
-    <header class="page-header">
-      <nav class="navigation">
-        <a href="index.html"><img class="logo" src="images/device_logo.svg" width="145" height="36" alt="Логотип магазина Девайс"></a>
-        <form class="search-form"><input type="search" value="Текст поиска" class="navigation-search">
-          <input type="button" value="Найти">
-        </form>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item"><a class="navigation-link" href="#">Войти</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Сравнить</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Корзина</a></li>
-        </ul>
-        <ol class="navigation-list">
-          <li class="navigation-item"><a class="navigaion-link" href="catalog.html">Каталог товаров</a></li>
-          <li class="navigation-item"><a class="navigaion-link" href="#">Доставка</a></li>
-          <li class="navigation-item"><a class="navigaion-link" href="#">Гарантия</a></li>
-          <li class="navigation-item"><a class="navigaion-link" href="#">Контакты</a></li>
-        </ol>
-      </nav>
-    </header>
+  <body> <header class="page-header">
+    <nav class="navigation">
+      <a href="index.html"><img class="logo" src="images/device_logo.svg" width="145" height="36" alt="Логотип магазина Девайс"></a>
+      <form class="search-form"><input type="search" value="Текст поиска" class="navigation-search">
+        <input type="button" value="Найти">
+      </form>
+      <ul class="navigation-list navigation-user">
+        <li class="navigation-item"><a class="navigation-link" href="#">Войти</a></li>
+        <li class="navigation-item"><a class="navigation-link" href="#">Сравнить</a></li>
+        <li class="navigation-item"><a class="navigation-link" href="#">Корзина</a></li>
+      </ul>
+      <ol class="navigation-list navigation-options">
+        <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог товаров</a></li>
+        <li class="navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
+        <li class="navigation-item"><a class="navigation-link" href="#">Гарантия</a></li>
+        <li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
+      </ol>
+    </nav>
+  </header>
     <main class="main-inner">
       <header class="inner-header">
-        <h1>Моноподы для селфи</h1>
+        <h1 class="section-title">Моноподы для селфи</h1>
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -41,10 +41,10 @@
       </header>
       <section class="catalog-products">
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-        <h3 class="catalog-filter">Фильтр:</h3>
+        <h3 class="catalog-filter-title">Фильтр:</h3>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Цвет</legend>
+            <legend class="catalog-filter-option">Цвет</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
@@ -79,7 +79,7 @@
             </ul>
           </fieldset>
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Bluetooth</legend>
+            <legend class="catalog-filter-option">Bluetooth</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
@@ -95,9 +95,9 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button" type="submit">Показать</button>
+          <button class="button button-show" type="submit">Показать</button>
         </form>
-        <h3 class="catalog-sorted">Сортировка:</h3>
+        <h3 class="catalog-filter-title">Сортировка:</h3>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Популярные</option>
           <option value="cheap">Дешевые</option>
@@ -142,7 +142,7 @@
         <button class="button-pagination-show-more" type="button">Загрузить ещё</button>
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">
+            <a class="button pagination-prev pagination-disabled">
               <span class="pagination-link-prev">Назад</span>
             </a>
           </li>
@@ -162,8 +162,8 @@
             <a class="pagination-link" href="#">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
-              <span class="pagination-link-prev">Вперёд</span>
+            <a class="button pagination-next" href="#">
+              <span class="button pagination-link-next">Вперёд</span>
             </a>
           </li>
         </ul>
@@ -175,9 +175,9 @@
         <p class="footer-address-info">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
       <ul class="footer-list">
-        <li class="footer-item"> <a class="footer-link" href="#">Доставка</a></li>
-        <li class="footer-item"><a class="footer-link" href="#">Гарантия</a></li>
-        <li class="footer-item"><a class="footer-link" href="#">Контакты</a></li>
+        <li class="footer-item"> <a class="button footer-link" href="#">Доставка</a></li>
+        <li class="footer-item"><a class="button button footer-link" href="#">Гарантия</a></li>
+        <li class="footer-item"><a class="button footer-link" href="#">Контакты</a></li>
       </ul>
       <a class="phone" href="tel:+78128121212"> Тел.: +7 812 812-12-12</a>
       <ul class="footer-social-list">
@@ -201,4 +201,3 @@
     </footer>
   </body>
 </html>
-  
