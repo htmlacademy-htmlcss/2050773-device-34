@@ -405,13 +405,24 @@ body {
   background-color: #FFFFFF;
 }
 
+.catalog-wrap {
+  display: flex;
+}
+
 .product-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  gap: 44px 40px;
+  padding: 70px 40px 44px;
 }
 
-
+.product-card-title {
+  margin: 0;
+  padding: 0;
+}
 
 .breadcrumbs-link {
   font-size: 16px;
