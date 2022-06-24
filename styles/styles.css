@@ -57,7 +57,6 @@ body {
 .header-logo {
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 60px;
 }
 
 .navigation-list,
@@ -72,7 +71,6 @@ body {
   display: flex;
   margin-bottom: 35px;
   justify-content: space-between;
-  margin-left: 60px;
 }
 
 .navigation-user {
@@ -84,13 +82,14 @@ body {
   margin-right: 60px;
 }
 
-.navigation-item {
-  margin-right: 60px;
-}
 
 
 .navigation-user .navigation-item:nth-child(1) {
-  margin-right: 200px;
+  margin-right: 140px;
+}
+
+.navigation-user .navigation-item:not(:nth-child(1)) {
+  margin-left: 60px;
 }
 
 
@@ -98,7 +97,6 @@ body {
   display: flex;
   margin-bottom: 38px;
   flex-wrap: wrap;
-  margin-left: 60px;
 }
 
 .navigation-options .navigation-item:nth-child(1) {
@@ -106,7 +104,7 @@ body {
 }
 
 .navigation-options .navigation-item:not(:nth-child(1)) {
-  margin-right: 50px;
+  margin-left: 45px;
 }
 
 .page-container {
@@ -117,6 +115,8 @@ body {
 .page-header {
   background-color: #FFE17F;
   color: #000000;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .navigation-link {
@@ -164,6 +164,9 @@ body {
   flex-shrink: 0;
 }
 
+
+
+
 .section-text {
   margin-top: 30px;
   margin-bottom: 60px;
@@ -171,14 +174,15 @@ body {
 
 .description-container {
   display: flex;
-  margin-top: 60px;
   margin-right: 20px;
   flex-direction: column-reverse;
 }
 
 .description-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  margin-top: 50px;
 }
 
 .product-container {
@@ -262,19 +266,26 @@ body {
 .about-wrap {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.about {
+  width: 520px;
+}
+
+.contacts {
+  width: 532px;
 }
 
 .about-items-info,
 .contacts-pickup-info {
   margin-top: 48px;
   margin-bottom: 30px;
-  width: 500px;
 }
 
 .about-delivery-info,
 .about-delivery-list {
   margin-bottom: 30px;
-  width: 500px;
 }
 
 .contacts-subtitle {
@@ -290,19 +301,17 @@ body {
 .subscription-wrap {
   display: flex;
   align-items: center;
-  width: 1160px;
+  justify-content: space-between;
   padding-top: 64px;
   padding-bottom: 70px;
-  margin-top: 80px;
 }
 
-.subscription-form,
-.title-subscription {
+.subscription-form {
   flex-grow: 1;
 }
 
 .title-subscription {
-  width: 350px;
+  width: 348px;
 }
 
 
@@ -372,8 +381,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  padding-top: 15px;
-  padding-bottom: 35px;
+  margin-top: 16px;
+  margin-bottom: 35px;
   margin-left: 60px;
   list-style-type: none;
 }
@@ -407,11 +416,12 @@ body {
 
 .catalog-wrap {
   display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .product-list {
   margin: 0;
-  padding: 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: 360px 360px;
@@ -433,31 +443,36 @@ body {
 
 .catalog-filter-wrap {
   display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+  padding-bottom: 25px;
 }
 
-.catalog-filter-title {
-  margin: 25px 206px 25px 60px;
-}
 
 .catalog-sort {
   margin-left: 40px;
+}
+
+.button-wrap {
+  display: flex;
 }
 
 .button-low-to-high {
   width: 11px;
   height: 10px;
   background-color: #000000;
-  margin: 10px;
-  margin-left: 238px;
+  padding: 10px;
   align-self: center;
+  margin-left: 10px;
 }
 
 .button-high-to-low {
   width: 11px;
   height: 10px;
   background-color: #000000;
-  margin: 10px;
+  padding: 10px;
   align-self: center;
+  margin-left: 10px;
 }
 
 .catalog-filter-title,
@@ -469,6 +484,10 @@ body {
   line-height: 19px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.catalog-filter-title {
+
 }
 
 .button-pagination-show-more {
