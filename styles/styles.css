@@ -197,10 +197,7 @@ body {
   padding: 0;
 }
 
-.catalog-title {
-  margin-left: 60px;
-  margin-top: 35px;
-}
+
 
 .button-container {
   width: 160px;
@@ -371,23 +368,35 @@ body {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
 }
 
 .main-inner {
-  color: #000000;
+  flex-grow: 1;
+  background-color: #F0F0F0;
 }
+
+.header-wrap {
+  background-color: #FFFFFF;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+
 
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin-top: 16px;
-  margin-bottom: 35px;
-  margin-left: 60px;
   list-style-type: none;
 }
 
 .breadcrumbs-item {
+  margin: 0;
+  padding: 0;
   margin-right: 36px;
 }
 
@@ -399,6 +408,7 @@ body {
 .catalog-products {
   background-color: #F0F0F0;
   display: flex;
+  flex-grow: 1;
 }
 
 .filter-wrap {
@@ -407,6 +417,7 @@ body {
 
 .catalog-right-column {
   width: 840px;
+  background-color: #FFFFFF;
 }
 
 .product-list,
@@ -417,7 +428,6 @@ body {
 .catalog-wrap {
   display: flex;
   padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .product-list {
@@ -427,11 +437,6 @@ body {
   grid-template-columns: 360px 360px;
   gap: 44px 40px;
   padding: 70px 40px 44px;
-}
-
-.product-card-title {
-  margin: 0;
-  padding: 0;
 }
 
 .breadcrumbs-link {
@@ -446,11 +451,11 @@ body {
   justify-content: space-between;
   padding-right: 40px;
   padding-bottom: 25px;
+  background-color: #F0F0F0;
 }
 
-
-.catalog-sort {
-  margin-left: 40px;
+.catalog-filter-group{
+  margin-top: 25px;
 }
 
 .button-wrap {
@@ -484,10 +489,23 @@ body {
   line-height: 19px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  margin: 0;
+  padding: 0;
 }
 
-.catalog-filter-title {
+.catalog-sort {
+  margin-left: 40px;
+}
 
+
+
+.product-card-image {
+  margin-bottom: 32px;
+}
+
+.card-wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-pagination-show-more {
@@ -495,6 +513,9 @@ body {
   width: 760px;
   padding-top: 18px;
   padding-bottom: 18px;
+  margin-left: 40px;
+  margin-bottom: 44px;
+  border: solid 3px #F0F0F0;
 }
 
 .product-card-link {
@@ -512,7 +533,11 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
+  margin-left: 40px;
+  margin-bottom: 78px;
   list-style-type: none;
+  background-color: #F0F0F0;
+  width: 760px;
 }
 
 .pagination-item:not(:first-child),
@@ -521,6 +546,7 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 10px 15px;
+  color: #444444
 }
 
 .pagination-item:first-child {

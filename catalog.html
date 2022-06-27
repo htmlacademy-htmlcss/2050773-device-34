@@ -31,20 +31,22 @@
     </nav>
   </header>
   <main class="main-inner main-container">
-    <header class="inner-header page-container">
-      <h1 class="section-title catalog-title">Моноподы для селфи</h1>
-      <ol class="breadcrumbs">
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="#">Каталог товаров</a>
-        </li>
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Моноподы для селфи</a>
-        </li>
-      </ol>
-    </header>
+    <div class="header-wrap">
+      <header class="inner-header page-container">
+        <h1 class="section-title catalog-title">Моноподы для селфи</h1>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="#">Каталог товаров</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Моноподы для селфи</a>
+          </li>
+        </ol>
+      </header>
+    </div>
     <section class="catalog-products">
       <div class="page-container catalog-wrap">
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
@@ -128,35 +130,45 @@
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/product_1.jpg" width="360" height="380"
                     alt="Стандартная селфи-палка черного цвета, на которую помещён смартфон ">
-                <h3 class="product-card-title">Любительская селфи-палка</h3>
+                <div class="card-wrap">
+                  <h3 class="product-card-title">Любительская селфи-палка</h3>
+                  <span class="product-card-price">1500 ₽</span>
+                </div>
               </a>
-              <span class="product-card-price">1500 ₽</span>
+
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/product_2.jpg" width="360" height="380"
                     alt="Селфи-палка со стабилизатором черного цвета">
-                <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                <div class="card-wrap">
+                  <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                  <span class="product-card-price">1500 ₽</span>
+                </div>
               </a>
-              <span class="product-card-price">1500 ₽</span>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/product_3.jpg" width="360" height="380"
                     alt="Селфи-палка желтого цвета с камерой 'go-pro'">
-                <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                <div class="card-wrap">
+                  <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                  <span class="product-card-price">2500 ₽</span>
+                </div>
               </a>
-              <span class="product-card-price">2500 ₽</span>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/product_4.jpg" width="360" height="380"
                     alt="Селфи-палка с эмитацией руки">
-                <h3 class="product-card-title">Селфи-палка "Следуй за мной"</h3>
+                <div class="card-wrap">
+                  <h3 class="product-card-title">Селфи-палка "Следуй за мной"</h3>
+                  <span class="product-card-price">1500 ₽</span>
+                </div>
               </a>
-              <span class="product-card-price">1500 ₽</span>
             </li>
           </ul>
+
           <button class="button-pagination-show-more" type="button">Загрузить ещё</button>
           <ul class="pagination">
             <li class="pagination-item">
