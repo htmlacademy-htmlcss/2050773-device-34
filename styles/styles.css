@@ -54,10 +54,6 @@ body {
   flex-grow: 1;
 }
 
-.header-logo {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
 
 .navigation-list,
 .slider-description,
@@ -69,6 +65,7 @@ body {
 
 .navigation-wrap {
   display: flex;
+  margin-top: 30px;
   margin-bottom: 35px;
   justify-content: space-between;
 }
@@ -117,6 +114,8 @@ body {
   color: #000000;
   padding-left: 60px;
   padding-right: 60px;
+  box-sizing: border-box;
+  margin-top: 40px;
 }
 
 .navigation-link {
@@ -164,9 +163,6 @@ body {
   flex-shrink: 0;
 }
 
-
-
-
 .section-text {
   margin-top: 30px;
   margin-bottom: 60px;
@@ -197,7 +193,10 @@ body {
   padding: 0;
 }
 
-
+.pagination-prev,
+.pagination-next {
+  padding: 25px;
+}
 
 .button-container {
   width: 160px;
@@ -279,11 +278,19 @@ body {
 .contacts-pickup-info {
   margin-top: 48px;
   margin-bottom: 30px;
+  width: 500px;
 }
 
-.about-delivery-info,
-.about-delivery-list {
+.about-delivery-info {
   margin-bottom: 30px;
+}
+
+.about-delivery-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 30px;
+  padding-left: 34px;
 }
 
 .contacts-subtitle {
@@ -292,7 +299,9 @@ body {
 }
 
 .contacts-schedule {
-  margin-top: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   margin-bottom: 40px;
 }
 
@@ -319,22 +328,22 @@ body {
 
 .footer-logo {
   margin-top: 62px;
+  margin-bottom: 35px;
 }
 
 .footer-line1 {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 62px;
+  margin-bottom: 47px;
 }
 
 .footer-address {
-  width: 250px;
+  width: 260px;
+  margin-right: 94px;
 }
 
 .footer-line2 {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
 }
@@ -343,6 +352,7 @@ body {
   width: 80px;
   height: 7px;
   background-color: #FFC700;
+  margin-right: 424px;
 }
 
 .footer-list {
@@ -352,7 +362,7 @@ body {
   list-style-type: none;
 }
 
-.footer-item {
+.footer-item:not(:last-child) {
   margin-right: 35px;
 }
 
@@ -362,12 +372,16 @@ body {
   margin: 0 0 12px;
 }
 
+.description-term {
+  font-size: 16px;
+}
+
 .about-delivery-item,
 .catalog-filter-option {
   font-weight: 700;
   line-height: 20px;
   color: #000000;
-  letter-spacing: 0.2em;
+  letter-spacing: -0.02em;
 }
 
 .about-delivery-item {
@@ -416,19 +430,18 @@ body {
   line-height: 19px;
 }
 
-.catalog-products {
-  background-color: #F0F0F0;
-  display: flex;
-  flex-grow: 1;
-}
-
 .filter-wrap {
   width: 320px;
 }
 
 .catalog-right-column {
-  width: 840px;
   background-color: #FFFFFF;
+}
+
+.product-list-wrap {
+  background-color: #FFFFFF;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .product-list,
@@ -443,11 +456,13 @@ body {
 
 .product-list {
   margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  margin-bottom: 44px;
   list-style-type: none;
   display: grid;
   grid-template-columns: 360px 360px;
   gap: 44px 40px;
-  padding: 70px 40px 44px;
 }
 
 .breadcrumbs-link {
@@ -524,9 +539,9 @@ body {
   width: 760px;
   padding-top: 18px;
   padding-bottom: 18px;
-  margin-left: 40px;
   margin-bottom: 44px;
   border: solid 3px #F0F0F0;
+  cursor: pointer;
 }
 
 .product-card-link {
@@ -541,43 +556,39 @@ body {
 }
 
 .pagination {
-  display: flex;
   padding: 0;
   margin: 0;
-  margin-left: 40px;
-  margin-bottom: 78px;
+  display: flex;
+  align-items: center;
   list-style-type: none;
+  margin-bottom: 78px;
   background-color: #F0F0F0;
-  width: 760px;
 }
 
 .pagination-item:not(:first-child),
 .pagination-item:not(:last-child)
  {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 10px 15px;
   color: #444444
 }
 
 .pagination-item:first-child {
   margin: 0;
-  padding: 25px;
   margin-right: 145px;
 }
 
 .pagination-item:last-child {
   margin: 0;
-  padding: 25px;
   margin-left: 145px;
 }
 
 .pagination-link {
+
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #444444;
   text-decoration: none;
+  padding: 10px 16px;
 }
 .contacts-subtitle {
   font-weight: 700;
@@ -601,26 +612,51 @@ body {
   font-style: normal;
 }
 
+.contacts-address-text {
+  margin: 0;
+  padding: 0;
+}
+
 .footer-address,
 .phone {
   font-size: 16px;
   line-height: 20px;
 }
 
+.phone {
+  margin: 0;
+  padding: 0;
+  width: 175px;
+  margin-left: 183px;
+}
+
 .footer-social-list {
   margin: 0;
   padding: 0;
+  margin-right: 390px;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-social-item {
+  margin: 0;
+  padding: 0;
   width: 40px;
   height: 40px;
+}
+
+.footer-social-item:not(:last-child) {
   margin-right: 15px;
+}
+
+.button-social {
+  width: 40px;
+  height: 40px;
+
   background-color: purple;
 }
 
-.footer-social-list {
+.test {
   display: flex;
-  flex-wrap: wrap;
 }
