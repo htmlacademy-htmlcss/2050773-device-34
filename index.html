@@ -16,17 +16,31 @@
           <input type="button" value="Найти">
         </form>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item"><a class="navigation-link" href="#">Войти</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="#">Сравнить</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Корзина</a></li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Войти</a>
+          </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">Сравнить</a>
+        </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Корзина</a>
+          </li>
         </ul>
       </div>
       <nav class="navigation">
         <ul class="navigation-list navigation-options">
-          <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог товаров</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Гарантия</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -104,12 +118,30 @@
         <section class="catalog-main">
           <h2 class="catalog-main-title visually-hidden">Каталог товаров</h2>
           <ul class="catalog-main-list">
-            <li class="catalog-main-item"><a class="button-catalog-link" href="#">Виртуальная реальность</a></li>
-            <li class="catalog-main-item"><a class="button-catalog-link" href="#">Моноподы под селфи</a></li>
-            <li class="catalog-main-item"><a class="button-catalog-link" href="#">Экшн-камеры</a></li>
-            <li class="catalog-main-item"><a class="button-catalog-link" href="#">Фитнес-браслеты</a></li>
-            <li class="catalog-main-item"><a class="button-catalog-link" href="#">Умные часы</a></li>
-            <li class="catalog-main-item"><a class="button-catalog-link" href="#">Квадрокоптеры</a></li>
+            <li class="catalog-main-item">
+              <div class="icon-vr"></div>
+              <a class="button-catalog-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="catalog-main-item">
+              <div class="icon-monopode"></div>
+              <a class="button-catalog-link" href="#">Моноподы <br>для селфи</a>
+            </li>
+            <li class="catalog-main-item">
+              <div class="icon-camera"></div>
+              <a class="button-catalog-link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="catalog-main-item">
+              <div class="icon-brace"></div>
+              <a class="button-catalog-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="catalog-main-item">
+              <div class="icon-watches"></div>
+              <a class="button-catalog-link" href="#">Умные часы</a>
+            </li>
+            <li class="catalog-main-item">
+              <div class="icon-quadro"></div>
+              <a class="button-catalog-link" href="#">Квадрокоптеры</a>
+            </li>
           </ul>
         </section>
       </div>
@@ -128,20 +160,20 @@
             </button>
           </div>
           <ul class="section-list">
-            <li class="section-item">
+            <li class="section-item-delivery">
               <h3 class="section-title">Доставка</h3>
               <p class="options-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
                   бесплатно!
                   Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </li>
-            <li class="section-item">
+            <li class="section-item-guarantee">
               <h3 class="section-title">Гарантия</h3>
               <p class="options-text">Если из-за возгорания купленного у нас товара у вас
                   сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
               </p>
             </li>
-            <li class="section-item">
+            <li class="section-item-credit">
               <h3 class="section-title">Кредит</h3>
               <p class="options-text">Залезть в долговую яму стало проще!
                   Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
@@ -176,7 +208,7 @@
             <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
             <address class="contacts-address">
               <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-              <a class="contacts-phone" href="tel:+78128121212">+7 812 812-12-12</a>
+              <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
             <h3 class="contacts-subtitle">Время работы</h3>
             <ul class="contacts-schedule">
@@ -188,9 +220,9 @@
       </div>
       <section class="subscription">
         <div class="page-container">
-          <div class="subscription-wrap">
+          <div class="subscription-wrap subscription-info">
             <h2 class="section-title title-subscription">Подпишитесь на рассылку</h2>
-            <p class="subscription-info">Еженедельный дайджест с обзорами новинок, <br>
+            <p class="subscription-text">Еженедельный дайджест с обзорами новинок, <br>
                   длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
             </p>
           </div>
@@ -223,17 +255,17 @@
           <div class="footer-rectangle"></div>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="button button-social" href="https://t.me/htmlacademy" target="_blank">
+              <a class="footer-social-link button-tg" href="https://t.me/htmlacademy" target="_blank">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+              <a class="footer-social-link button-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://twitter.com/htmlacademy_ru" target="_blank">
+              <a class="footer-social-link button-tw" href="https://twitter.com/htmlacademy_ru" target="_blank">
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
