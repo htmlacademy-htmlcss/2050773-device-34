@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <header class="page-header page-container main-header">
@@ -11,31 +12,33 @@
         alt="Логотип магазина Девайс">
       </a>
       <div class="navigation-wrap">
-        <form class="search-form">
-          <input class="navigation-search" type="search" value="Текст поиска">
-          <input class="navigation-search-button" type="button" value="Найти">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="search-form-wrap" aria-label="Поиск по сайту">
+            <input class="navigation-search" type="search" placeholder="Поиск по сайту" value="Текст поиска" required>
+          </label>
+          <label class="search-form-wrap" aria-label="Поиск по сайту">
+            <button class="navigation-search-button" type="submit">Найти</button>
+          </label>
         </form>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
+          <li class="navigation-item user-login">
             <a class="navigation-link navigation-icon" href="#">
-              <svg aria-hidden="true" focusable="false" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path
+              <svg class="navigation-svg" aria-hidden="true" focusable="false" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path
                 d="M0 12h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C10 1.6 8.4 0 6.5 0A3.5
                 3.5 0 0 0 3 3.5c0 1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 0 12Z" fill="#000"/>
               </svg>
               Войти
             </a>
           </li>
-          <li class="navigation-item log-out">
-            <a class="navigation-link navigation-icon" href="#">Выйти</a>
-          </li>
-          <li class="navigation-item">
+          <li class="navigation-item user-compare">
             <a class="navigation-link navigation-icon navigation-compare" href="#">
-              <svg aria-hidden="true" focusable="false" width="10" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0H4v12h2V0ZM2 4H0v8h2V4ZM10 3H8v9h2V3Z" fill="#000"/></svg>
-              Сравнить</a>
+              <svg class="navigation-svg" aria-hidden="true" focusable="false" width="10" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0H4v12h2V0ZM2 4H0v8h2V4ZM10 3H8v9h2V3Z" fill="#000"/></svg>
+              Сравнить
+            </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item user-basket">
             <a class="navigation-link navigation-icon basket" href="#">
-              <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2
+              <svg class="navigation-svg" aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2
                 0-.5.1-.6.3L4.2 5.2H.7c-.4
                 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4
                 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/></svg>
@@ -84,8 +87,8 @@
               Каталог товаров
               <span class="plus-button"></span>
             </button>
-            <ul class="subcatalog">
-              <div class="subcatalog-wrap">
+            <div class="subcatalog">
+              <ul class="subcatalog-list">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Виртуальная реальность</a>
                 </li>
@@ -95,21 +98,21 @@
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Экшн-камеры</a>
                 </li>
-              </div>
-              <div class="subcatalog-wrap">
+              </ul>
+              <ul class="subcatalog-list">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Умные часы</a>
                 </li>
-              </div>
-              <div class="subcatalog-wrap">
+              </ul>
+              <ul class="subcatalog-list">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Квадрокоптеры</a>
                 </li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-icon" href="#">Доставка</a>
@@ -150,7 +153,7 @@
               </div>
             </div>
           </li>
-          <li class="slider-item visually-hidden">
+          <li class="slider-item item-02 visually-hidden">
             <h2 class="slider-2-title visually-hidden">Фитнес-браслет</h2>
             <div class="product-container container-2">
               <img class="slider-image" src="images/fitness_bracelet.png" width="560" height="560" alt="Фитнес-браслет">
@@ -170,7 +173,7 @@
               </div>
             </div>
           </li>
-          <li class="slider-item visually-hidden">
+          <li class="slider-item item-03 visually-hidden">
             <h2 class="slider-3-title visually-hidden">Селфи-палка</h2>
             <div class="product-container container-3">
               <img class="slider-image" src="images/selfie_sticks.png" width="560" height="560" alt="Селфи-палки">
@@ -298,39 +301,30 @@
       </section>
       <section class="unique-delivery page-container">
         <h3 class="visually-hidden">Уникальная доставка</h3>
-          <a class="unique-delivery-link" href="#">
-            Доставим редкий товар под заказ
-          </a>
+          <a class="unique-delivery-link" href="#">Доставим редкий товар под заказ</a>
       </section>
       <div class="about-wrap page-container">
         <section class="about">
           <h2 class="section-title about-title">О нас</h2>
           <p class="about-items-info">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-          </p>
+            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <h3 class="about-subtitle visually-hidden">Транспортные компании</h3>
-          <p class="about-delivery-info">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными
-              компаниями:</p>
+          <p class="about-delivery-info">Мы можем доставить ваш товар в самые отдалённые уголки России транспортнымикомпаниями:</p>
           <ul class="about-delivery-list">
             <li class="about-delivery-item">Меловые линии</li>
             <li class="about-delivery-item">СДИК</li>
             <li class="about-delivery-item">ТоксБерри</li>
           </ul>
-          <a class="button yellow-button about-delivery-button" href="#">
-            Подробнее о нас
-          </a>
+          <a class="button yellow-button about-delivery-button" href="#">Подробнее о нас</a>
         </section>
           <section class="contacts">
             <h2 class="section-title about-title">Контакты</h2>
             <p class="contacts-pickup-info">
               Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить
-              работоспособность покупки.
-            </p>
+              работоспособность покупки.</p>
             <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
             <address class="contacts-address">
-              <p class="contacts-address-text">
-                Санкт-Петербург, набережная реки Карповки, 5, литера П.
-              </p>
+              <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
               <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
             <h3 class="contacts-subtitle">Время работы</h3>
@@ -352,7 +346,7 @@
           <div class="subscription-wrap">
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="newsletter-email">Email</label>
-              <input class="field"  placeholder="Ваш email" type="email" name="newsletter-email" id="newsletter-email" required>
+              <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
               <button type="submit" class="button subscription-button"><span>Подписаться</span></button>
             </form>
             <p class="subscription-additional-info">Это бесплатно</p>
@@ -429,21 +423,28 @@
                 <label class="modal-text" for="auth-login">Ваше имя:</label>
                 <input class="auth-form-field field name-field" type="text" id="auth-login" name="auth-login" placeholder="Введите имя">
               </p>
-              <p class="field-group">
-                <label class="modal-text" for="auth-email">Ваш email:</label>
-                <input class="auth-form-field field email-field" type="email" id="auth-email" name="auth-email" placeholder="почта">
+              <p class="field-group field-email">
+                <label class="modal-text modal-email" for="auth-email">Ваш e-mail:</label>
+                <input class="auth-form-field field email-field" type="email" id="auth-email" name="auth-email" value="почта">
+                <span class="auth-email-error">Забавный у вас адрес</span>
               </p>
             </div>
-            <div class="modal-wrap">
+            <div class="modal-wrap modal-amount">
               <p class="field-group">
                 <label class="modal-text" for="auth-item">Что нужно привезти:</label>
                 <input class="auth-form-field field item-field" type="text" id="auth-item" name="auth-item" placeholder="В свободной форме">
               </p>
               <div class="auth-amount">
-                <p class="modal-text modal-info">Количество:</p>
+                <div class="tooltip-wrap">
+                  <label class="modal-text modal-info-amount" for="auth-amount">Количество:</label>
+                  <a class="tooltip-icon" href="#"></a>
+                  <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                      к провозу багажа.
+                  </p>
+                </div>
                 <div class="amount-wrap">
                   <button class="button amount-button modal-minus" type="button"><span class="visually-hidden">Убавить.</span></button>
-                  <span class="amount-button">1</span>
+                  <input class="modal-amount-input" type="number" id="auth-amount" min="1" step="1" value="1">
                   <button class="button amount-button modal-plus" type="button"><span class="visually-hidden">Добавить.</span></button>
                 </div>
               </div>

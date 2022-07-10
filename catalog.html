@@ -7,37 +7,41 @@
 </head>
 <body>
   <header class="page-header page-container header-catalog">
-    <a href="index.html"><img class="header-logo" src="images/device_logo.svg" width="145" height="36"
+    <a class="header-logo-link" href="index.html"><img class="header-logo" src="images/device_logo.svg" width="145" height="36"
       alt="Логотип магазина Девайс">
     </a>
     <div class="navigation-wrap">
-      <form class="search-form">
-        <input class="navigation-search" type="search" value="Текст поиска">
-        <input class="navigation-search-button" type="button" value="Найти">
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="search-form-wrap" aria-label="Поиск по сайту">
+          <input class="navigation-search" type="search" placeholder="Поиск по сайту" value="Текст поиска" required>
+        </label>
+        <label class="search-form-wrap" aria-label="Поиск по сайту">
+          <button class="navigation-search-button" type="submit">Найти</button>
+        </label>
       </form>
       <ul class="navigation-list navigation-user">
-        <li class="catalog-navigation-item">
+        <li class="catalog-navigation-item navigation-log-in">
           <a class="navigation-link navigation-icon" href="#">
-            <svg aria-hidden="true" focusable="false" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path
+            <svg class="navigation-svg" aria-hidden="true" focusable="false" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path
               d="M0 12h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C10 1.6 8.4 0 6.5 0A3.5
               3.5 0 0 0 3 3.5c0 1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 0 12Z" fill="#000"/></svg>
             Коля Петухов
           </a>
         </li>
-        <li class="navigation-item log-out">
+        <li class="navigation-item navigation-log-out">
           <a class="navigation-link navigation-icon" href="#">
             Выйти
           </a>
         </li>
-        <li class="catalog-navigation-item">
+        <li class="catalog-navigation-item user-compare">
           <a class="navigation-link navigation-icon" href="#">
-            <svg aria-hidden="true" focusable="false" width="10" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0H4v12h2V0ZM2 4H0v8h2V4ZM10 3H8v9h2V3Z" fill="#000"/></svg>
+            <svg class="navigation-svg" aria-hidden="true" focusable="false" width="10" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0H4v12h2V0ZM2 4H0v8h2V4ZM10 3H8v9h2V3Z" fill="#000"/></svg>
             Сравнить
           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link navigation-icon basket" href="#">
-            <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2
+            <svg class="navigation-svg" aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2
               0-.5.1-.6.3L4.2 5.2H.7c-.4
               0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4
               1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/></svg>
@@ -86,8 +90,8 @@
             Каталог товаров
             <span class="plus-button"></span>
           </button>
-          <ul class="subcatalog">
-            <div class="subcatalog-wrap">
+          <div class="subcatalog">
+            <ul class="subcatalog-list">
               <li class="subcatalog-item">
                 <a class="subcatalog-link" href="#">Виртуальная реальность</a>
               </li>
@@ -97,21 +101,21 @@
               <li class="subcatalog-item">
                 <a class="subcatalog-link" href="#">Экшн-камеры</a>
               </li>
-            </div>
-            <div class="subcatalog-wrap">
+            </ul>
+            <ul class="subcatalog-list">
               <li class="subcatalog-item">
                 <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
               </li>
               <li class="subcatalog-item">
                 <a class="subcatalog-link" href="#">Умные часы</a>
               </li>
-            </div>
-            <div class="subcatalog-wrap">
+            </ul>
+            <ul class="subcatalog-list">
               <li class="subcatalog-item">
                 <a class="subcatalog-link" href="#">Квадрокоптеры</a>
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
         </li>
         <li class="navigation-item">
           <a class="navigation-link navigation-icon" href="#">Доставка</a>
@@ -146,13 +150,13 @@
       <div class="page-container catalog-wrap">
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
         <div class="filter-wrap">
-          <h3 class="catalog-sort-title">Фильтр:</h3>
+          <h3 class="catalog-filter-title">Фильтр:</h3>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group">
-              <legend class="filter-title">Стоимость:</legend>
+            <fieldset class="catalog-filter-group price-group">
+              <legend class="filter-title price-title">Стоимость:</legend>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 0; width: 119px">
+                  <div class="range-bar" style="left: -10px; width: 129px">
                     <button class="range-toggle toggle-min">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -162,47 +166,47 @@
                   </div>
                 </div>
                 <div class="range-wrapper-inputs">
-                  <label class="catalog-filter-label">
-                    от <input class="range-input" type="number" value="50" name="min-price"> ₽
+                  <label class="catalog-filter-label price-min">
+                    от <input class="range-input visually-hidden" type="number" value="0" name="min-price"> 0
                   </label>
                   <label class="catalog-filter-label">
-                    до <input class="range-input" type="number" value="1500" name="max-price" style="width: 37px"> ₽
+                    до <input class="range-input visually-hidden" type="number" value="5000" name="max-price"> 5000
                   </label>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="catalog-filter-group">
-              <legend class="filter-title">Цвет</legend>
+            <fieldset class="catalog-filter-group color-group">
+              <legend class="filter-title color-title">Цвет</legend>
               <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
+                <li class="color-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="checkbox" name="Black" checked>
                     <span class="control-mark"></span>
                       Черный
                   </label>
                 </li>
-                <li class="catalog-filter-item">
+                <li class="color-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="checkbox" name="White" checked>
                     <span class="control-mark"></span>
                       Белый
                   </label>
                   </li>
-                <li class="catalog-filter-item">
+                <li class="color-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="checkbox" name="Blue">
                     <span class="control-mark"></span>
                       Синий
                   </label>
                 </li>
-                <li class="catalog-filter-item">
+                <li class="color-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="checkbox" name="Red">
                     <span class="control-mark"></span>
                       Красный
                   </label>
                 </li>
-                <li class="catalog-filter-item">
+                <li class="color-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="checkbox" name="Pink">
                     <span class="control-mark"></span>
@@ -211,17 +215,17 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filter-group">
-              <legend class="filter-title">Bluetooth</legend>
+            <fieldset class="catalog-filter-group bluetooth-group">
+              <legend class="filter-title bluetooth-title">Bluetooth</legend>
               <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
+                <li class="bluetooth-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="radio" name="product-group" value="yes" checked>
                     <span class="control-mark"></span>
                     Есть
                   </label>
                 </li>
-                <li class="catalog-filter-item">
+                <li class="bluetooth-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="radio" name="product-group" value="no" >
                     <span class="control-mark"></span>
@@ -235,7 +239,7 @@
         </div>
         <div class="catalog-right-column">
           <div class="catalog-filter-wrap">
-            <h3 class="catalog-filter-title catalog-sort">Сортировка:</h3>
+            <h3 class="catalog-sort-title">Сортировка:</h3>
             <select class="select-control" aria-label="Сортировка">
               <option value="popular">Популярные</option>
               <option value="cheap">Дешевые</option>
@@ -340,19 +344,13 @@
         </address>
         <ul class="footer-list">
           <li class="footer-item">
-            <a class="button footer-link" href="#">
-              Доставка
-            </a>
+            <a class="button footer-link" href="#">Доставка</a>
           </li>
           <li class="footer-item">
-            <a class="button footer-link" href="#">
-              Гарантия
-            </a>
+            <a class="button footer-link" href="#">Гарантия</a>
           </li>
           <li class="footer-item">
-            <a class="button footer-link" href="#">
-              Контакты
-            </a>
+            <a class="button footer-link" href="#">Контакты</a>
           </li>
         </ul>
         <a class="phone" href="tel:+78128121212">
