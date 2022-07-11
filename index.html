@@ -8,17 +8,17 @@
   </head>
   <body>
     <header class="page-header page-container main-header">
-      <a class="header-logo-link" href="index.html"><img class="header-logo" src="images/device_logo.svg" width="145" height="36"
-        alt="Логотип магазина Девайс">
+      <a class="header-logo-link" href="index.html">
+        <img class="header-logo" src="images/device_logo.svg" width="145" height="36" alt="Логотип магазина Девайс">
       </a>
       <div class="navigation-wrap">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="search-form-wrap" aria-label="Поиск по сайту">
-            <input class="navigation-search" type="search" placeholder="Поиск по сайту" value="Текст поиска" required>
+            <input class="navigation-search" name="search" type="search" placeholder="Поиск по сайту" value="Текст поиска" required>
           </label>
-          <label class="search-form-wrap" aria-label="Поиск по сайту">
+          <div class="focus-wrap">
             <button class="navigation-search-button" type="submit">Найти</button>
-          </label>
+          </div>
         </form>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item user-login">
@@ -206,19 +206,21 @@
         <button class="slider-right slider-button"></button>
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">1 фото</span>
-            </button>
+            <span class="visually-hidden">1 фото</span>
+            <div class="focus-slider-wrap">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button"></button>
+            </div>
           </li>
           <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">2 фото</span>
-            </button>
+            <span class="visually-hidden">2 фото</span>
+            <div class="focus-slider-wrap">
+              <button class="slider-pagination-button" type="button"></button>
+            </div>
           </li>
           <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">3 фото</span>
-            </button>
+            <div class="focus-slider-wrap">
+              <button class="slider-pagination-button" type="button"></button>
+            </div>
           </li>
         </ol>
         <section class="catalog-main">
@@ -270,10 +272,10 @@
             <button class="button options-button options-button-current" type="button">
               <span class="button-delivery">Доставка</span>
             </button>
-            <button class="button options-button options-button-rest" type="button">
+            <button class="button options-button options-button-rest yellow-button" type="button">
               <span class="button-guarantee">Гарантия</span>
             </button>
-            <button class="button options-button options-button-rest" type="button">
+            <button class="button options-button options-button-rest yellow-button" type="button">
               <span class="button-credit">Кредит</span>
             </button>
           </div>
@@ -346,7 +348,7 @@
           <div class="subscription-wrap">
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="newsletter-email">Email</label>
-              <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+              <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
               <button type="submit" class="button subscription-button"><span>Подписаться</span></button>
             </form>
             <p class="subscription-additional-info">Это бесплатно</p>
@@ -426,7 +428,7 @@
               <p class="field-group field-email">
                 <label class="modal-text modal-email" for="auth-email">Ваш e-mail:</label>
                 <input class="auth-form-field field email-field" type="email" id="auth-email" name="auth-email" value="почта">
-                <span class="auth-email-error">Забавный у вас адрес</span>
+                <span class="auth-email-text">Забавный у вас адрес</span>
               </p>
             </div>
             <div class="modal-wrap modal-amount">
@@ -434,17 +436,17 @@
                 <label class="modal-text" for="auth-item">Что нужно привезти:</label>
                 <input class="auth-form-field field item-field" type="text" id="auth-item" name="auth-item" placeholder="В свободной форме">
               </p>
-              <div class="auth-amount">
+              <div class="auth-number">
                 <div class="tooltip-wrap">
-                  <label class="modal-text modal-info-amount" for="auth-amount">Количество:</label>
+                  <label class="modal-text modal-info-amount" for="auth-number">Количество:</label>
                   <a class="tooltip-icon" href="#"></a>
-                  <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                  <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
                       к провозу багажа.
                   </p>
                 </div>
                 <div class="amount-wrap">
+                  <input class="modal-amount-input" name="auth-number" type="number" id="auth-number" min="1" step="1" value="1">
                   <button class="button amount-button modal-minus" type="button"><span class="visually-hidden">Убавить.</span></button>
-                  <input class="modal-amount-input" type="number" id="auth-amount" min="1" step="1" value="1">
                   <button class="button amount-button modal-plus" type="button"><span class="visually-hidden">Добавить.</span></button>
                 </div>
               </div>

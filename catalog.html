@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
   <header class="page-header page-container header-catalog">
@@ -13,11 +14,11 @@
     <div class="navigation-wrap">
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="search-form-wrap" aria-label="Поиск по сайту">
-          <input class="navigation-search" type="search" placeholder="Поиск по сайту" value="Текст поиска" required>
+          <input class="navigation-search" name="search" type="search" placeholder="Поиск по сайту" value="Текст поиска" required>
         </label>
-        <label class="search-form-wrap" aria-label="Поиск по сайту">
+        <div class="focus-wrap">
           <button class="navigation-search-button" type="submit">Найти</button>
-        </label>
+        </div>
       </form>
       <ul class="navigation-list navigation-user">
         <li class="catalog-navigation-item navigation-log-in">
@@ -156,7 +157,7 @@
               <legend class="filter-title price-title">Стоимость:</legend>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: -10px; width: 129px">
+                  <div class="range-bar" style="left: 7px; width: 105px">
                     <button class="range-toggle toggle-min">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -169,7 +170,7 @@
                   <label class="catalog-filter-label price-min">
                     от <input class="range-input visually-hidden" type="number" value="0" name="min-price"> 0
                   </label>
-                  <label class="catalog-filter-label">
+                  <label class="catalog-filter-label price-max">
                     до <input class="range-input visually-hidden" type="number" value="5000" name="max-price"> 5000
                   </label>
                 </div>
@@ -221,14 +222,14 @@
                 <li class="bluetooth-filter-item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="radio" name="product-group" value="yes" checked>
-                    <span class="control-mark"></span>
+                    <span class="control-mark-radio"></span>
                     Есть
                   </label>
                 </li>
                 <li class="bluetooth-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="product-group" value="no" >
-                    <span class="control-mark"></span>
+                    <input class="control-input visually-hidden" type="radio" name="product-group" value="no">
+                    <span class="control-mark-radio"></span>
                     Нет
                   </label>
                 </li>
@@ -259,6 +260,7 @@
               <li class="product-card">
                 <a class="product-card-link" href="#">
                   <div class="button product-card-more">Подробнее</div>
+                  <div class="product-transparent-image"></div>
                   <img class="product-card-image" src="images/product_1.jpg" width="360" height="380"
                       alt="Стандартная селфи-палка черного цвета, на которую помещён смартфон ">
                   <div class="card-wrap">
@@ -269,7 +271,8 @@
               </li>
               <li class="product-card">
                 <a class="product-card-link" href="#">
-                  <div class="button product-card-more"> Подробнее</div>
+                  <div class="button product-card-more">Подробнее</div>
+                  <div class="product-transparent-image"></div>
                   <img class="product-card-image" src="images/product_2.jpg" width="360" height="380"
                       alt="Селфи-палка со стабилизатором черного цвета">
                   <div class="card-wrap">
@@ -280,6 +283,7 @@
               </li>
               <li class="product-card">
                 <a class="product-card-link" href="#">
+                  <div class="product-transparent-image"></div>
                   <div class="button product-card-more">Подробнее</div>
                   <img class="product-card-image" src="images/product_3.jpg" width="360" height="380"
                       alt="Селфи-палка желтого цвета с камерой 'go-pro'">
@@ -291,6 +295,7 @@
               </li>
               <li class="product-card">
                 <a class="product-card-link" href="#">
+                  <div class="product-transparent-image"></div>
                   <div class="button product-card-more">Подробнее</div>
                   <img class="product-card-image" src="images/product_4.jpg" width="360" height="380"
                       alt="Селфи-палка с эмитацией руки">
