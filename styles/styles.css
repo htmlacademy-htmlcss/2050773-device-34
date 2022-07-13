@@ -214,7 +214,8 @@ body {
   display: none;
 }
 
-.navigation-button:hover + .subcatalog {
+.navigation-button:hover + .subcatalog,
+.navigation-button:focus-within + .subcatalog {
   display: flex;
 }
 
@@ -223,6 +224,10 @@ body {
   margin-right: 60px;
   padding: 0;
   list-style-type: none;
+}
+
+.subcatalog-current {
+  border-bottom: solid 1px #000000;
 }
 
 .main-container {
@@ -818,7 +823,8 @@ body {
   margin-bottom: 70px;
 }
 
-.pagination-big {
+.pagination-big,
+.pagination-disabled {
   padding: 25px;
 }
 
@@ -918,7 +924,6 @@ body {
   color: #000000;
   text-decoration: none;
   display: inline-block;
-  cursor: pointer;
 }
 
 .button-catalog-link {
@@ -1200,15 +1205,15 @@ body {
   padding-left: 18px;
 }
 
-.newslatter-field:focus {
+.newsletter-field:focus {
   background-color: #dcdcdc;
 }
 
-.newslatter-field:focus:invalid {
-  border-bottom: solid 3px #ff3d3d;
+.newsletter-field:focus:invalid {
+  border-bottom: solid 2px #ff3d3d;
 }
 
-.newslatter-field:disabled {
+.newsletter-field:disabled {
   opacity: 0.3;
 }
 
@@ -1257,7 +1262,6 @@ body {
 .footer-line2 {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
   padding-bottom: 60px;
 }
 
@@ -1399,6 +1403,7 @@ body {
   position: relative;
   height: 2px;
   margin-bottom: 6px;
+  margin-right: 20px;
   background-color: #dcdcdc;
 }
 
@@ -1463,16 +1468,10 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
-.price-min {
-  margin-right: 70px;
-}
-
-.price-min:focus,
-.price-max:focus {
+.price-min:focus-within,
+.price-max:focus-within {
   outline: solid 2px #af4fff;
 }
-
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
@@ -1480,11 +1479,33 @@ body {
   margin: 0;
 }
 
+.range-input {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  color: inherit;
+  outline: none;
+}
+
+.range-min {
+  width: 12px;
+  height: 18px;
+}
+
+.range-max {
+  width: 40px;
+  height: 18px;
+}
+
 .catalog-filter-group {
   margin: 0;
   margin-top: 25px;
   padding: 0;
   border: none;
+}
+
+.price-min {
+  margin-right: 68px;
 }
 
 .price-group {
@@ -1546,6 +1567,10 @@ body {
 .control-input:focus + .control-mark,
 .control-input:focus + .control-mark-radio::after {
   outline: solid 2px #af4fff;
+}
+
+.control-input:disabled ~ span {
+  opacity: 0.1;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark,
@@ -1987,15 +2012,16 @@ body {
   outline: solid 2px #af4fff;
 }
 
-.phonek:active {
+.phone:active {
   color: #ffc700;
-  opacity: 0.5;
+  opacity: 0.3;
   outline: none;
 }
 
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  align-self: baseline;
   margin: 0;
   padding: 0;
   margin-left: 35px;
@@ -2015,23 +2041,10 @@ body {
   display: block;
 }
 
-.button-tg {
-  background-image: url("../images/icons/telegram.svg");
-  background-repeat: no-repeat;
-}
-
-.button-tw {
-  background-image: url("../images/icons/twitter.svg");
-  background-repeat: no-repeat;
-}
-
-.button-youtube {
-  background-image: url("../images/icons/youtube.svg");
-  background-repeat: no-repeat;
-}
-
 .footer-social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2043,7 +2056,6 @@ body {
 
 .footer-social-link:hover {
   background-color: #ffc700;
-  opacity: 0.8;
 }
 
 .footer-social-item:focus-within {
@@ -2056,12 +2068,17 @@ body {
 
 .footer-social-link:active {
   color: #ffc700;
-  opacity: 0.5;
   outline: none;
 }
 
+.footer-social-link:active .footer-icon {
+  opacity: 0.3;
+}
+
 .htmlacademy-link {
+  margin-top: 5px;
   margin-left: auto;
+  align-self: flex-end;
 }
 
 .section-item {
@@ -2141,8 +2158,7 @@ body {
   outline: solid 2px #af4fff;
 }
 
-.htmlacademy-logo:active,
-.phone:hover {
+.htmlacademy-logo:active {
   fill: #ffffff;
   opacity: 0.5;
   outline: none;
@@ -2265,11 +2281,11 @@ body {
   outline: solid 2px #af4fff;
 }
 
-.auth-form-field:invalid {
+.auth-form-field:focus:invalid {
   outline: solid 2px #ff3d3d;
 }
 
-.auth-form-field:invalid + .auth-email-text {
+.auth-form-field:focus:invalid + .auth-email-text {
   color: #ff3d3d;
 }
 
@@ -2436,12 +2452,17 @@ body {
   text-align: center;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
-  appearance: textfield;
+  appearance: none;
   margin: 0;
   padding: 0;
   outline: none;
   padding-left: 60px;
   padding-right: 60px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .modal-amount-input:invalid {
